@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATERIAS J.S</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>BATERIAS J.S</h1>
+        <a href="checkout.html" class="carrito">🛒 (<span id="cart-count">0</span>)</a>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </header>
+<form action="/buscar" method="GET">
+    <input type="text" name="query" placeholder="Buscar..." required>
+    <button type="submit">Buscar</button>
+</form>
+
+<div class="inicio-sesion">
+    <h2>Iniciar Sesión</h2>
+    <form action="/BATERIAS JS/inicio_sesion.php" method="POST">
+        <label for="rol">Selecciona tu rol:</label>
+        <select id="rol" name="rol" required>
+            <option value="">--Selecciona--</option>
+            <option value="cliente">Cliente</option>
+            <option value="administrador">Administrador</option>
+            <option value="vendedor">Vendedor</option>
+        </select>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <p>No estás registrado? <a href="#" onclick="mostrarRegistro()">Regístrate aquí</a></p>
+
+    <div id="formulario-registro" style="display: none;">
+        <h2>Registro</h2>
+        <form action="tu_script_de_registro.php" method="post">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <p><a href="#" onclick="ocultarRegistro()">Cancelar registro</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>POTENCIA TU VEHÍCULO CON NUESTRAS BATERÍAS DE ALTA CALIDAD</h2>
+
+    <div class="product">
+        <h3>Batería de moto 12Ah</h3>
+        <p>Precio: $90.000</p>      
+        <img src="bttt.jpeg" width="10%">                                                  
+        <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
+        
+    </div>
+    <div class="product">
+        <h3>Batería de Carro 40Ah</h3>
+        <p>Precio: $435.000</p>      
+        <img src="bcarros.webp" width="10%">                                                  
+        <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
+        
+    </div>
+    <div class="product">
+        <h3>Batería de moto 12Ah</h3>
+        <p>Precio: $75.000</p>      
+        <img src="btt.webp" width="10%">                                                  
+        <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
+        
+    </div>
+
+    <div class="product">
+        <h3>Batería de Carro 60Ah</h3>
+        <p>Precio: $650.000</p>
+        <img src="btb.jpeg" width="10%"> 
+        <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
+    </div>
+
+    <div class="product">
+        <h3>Batería de Moto 12Ah</h3>
+        <p>Precio: $79.000</p>
+        <img src="bt.webp" width="10%"> 
+        <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
+    </div>
+
+    <h2>Contacto</h2>
+    <form action="#" method="post">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; BATERIAS J.S - LA MEJOR OPCIÓN PARA TU VEHÍCULO.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

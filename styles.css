@@ -1,0 +1,82 @@
+body {
+    background-image: url('ssj.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height:50vh*50vh;
+    margin: 10%*10%;
+    padding: 15;
+}
+.carrito {
+    color: rgb(231, 231, 8); 
+    font-size: 20px; 
+    font-weight: bold;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a5aaaaf8;
+}
+
+header {
+    background: #414344;
+    color: rgb(235, 213, 15);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.inicio-sesion {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #807979;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #42fdbf;
+    color: rgb(8, 8, 8);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #18dae0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.product {
+    border: 1px solid #f7efef;
+    margin-bottom: 20px;
+    background: rgb(202, 207, 206);
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #424342;
+    color: rgba(230, 255, 5, 0.925);
+    
+}
