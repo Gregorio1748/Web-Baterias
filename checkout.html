@@ -10,35 +10,42 @@
 
 <header>
     <h1>Pagar 🛒 (<span id="cart-count">0</span>)</h1>
+    <!--muestra el numero de productos en el carrito -->
 </header>
-
+<!--contenedor para los detalles de pago-->
 <div class="container">
     <h2>Detalles de Pago</h2>
-    <p>Total de productos: <span id="total-items">0</span></p>
-    
+    <p>Total de productos: <span id="total-items">0</span></p> <!--muesta la cantidad total de productos -->
+
+    <!-- formulario para procesar pago-->
     <form action="procesar_pago.php" method="post">
+        <!--campo para el nombre del cliente-->
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
 
+<!--campo para la direccion de entrega-->
         <label for="direccion">Dirección:</label>
         <input type="text" id="direccion" name="direccion" required>
 
+        <!--selector del metodo de pago-->
         <label for="metodo">Método de Pago:</label>
         <select id="metodo" name="metodo" required>
             <option value="tarjeta">Tarjeta de Crédito</option>
             <option value="paypal">PayPal</option>
             <option value="transferencia">Transferencia Bancaria</option>
         </select>
-        <p class="metodo-pago">Método de Pago</p>
+        <p class="metodo-pago">Método de Pago</p> <!--texto informativo adiccional-->
 
+        <!--boton para enviar formulario y pagar -->
         <button type="submit" onclick="finalizarCompra()">Pagar</button>
     </form>
 </div>
 
+<!--Script para actualizar dinamicamente el contador del carrito y el total de itenms -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const savedCartCount = localStorage.getItem("cartCount");
-        if (savedCartCount) {
+        const savedCartCount = localStorage.getItem("cartCount");//obtiene el valor el carrito desde el almacenamiento local
+        if (savedCartCount) {//actualiza el contador de carrito y el total de productos en la pagina 
             document.getElementById("cart-count").innerText = savedCartCount;
             document.getElementById("total-items").innerText = savedCartCount;
         }

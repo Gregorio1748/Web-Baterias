@@ -1,82 +1,86 @@
+/*Estilo general de cuerpo (body) con imagen de fondo*/
 body {
-    background-image: url('ssj.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: url('ssj.jpg'); /*imagen de fondo*/
+    background-size: cover; /*cubre toda el area disponible*/
+    background-position: center; /*centra la imagen*/
+    background-repeat: no-repeat; /*evita que la imagen se repita*/
     height:50vh*50vh;
     margin: 10%*10%;
     padding: 15;
 }
+/*estilo de carrito*/
 .carrito {
-    color: rgb(231, 231, 8); 
-    font-size: 20px; 
-    font-weight: bold;
+    color: rgb(231, 231, 8); /*color amarillo llamativo*/ 
+    font-size: 20px; /*tamaño del texto*/
+    font-weight: bold;/*negrita*/
 }
+/*estilo general del cuerpo (redifinido, sobrescribe ela anterior*/
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #a5aaaaf8;
+    font-family: Arial, sans-serif;/*tipo de letra*/
+    margin: 0;/*elimina margenes por defecto*/
+    padding: 0;/*elimina relleno por defecto*/
+    background-color: #a5aaaaf8;/*color de fondo (sobrescribe el fondo anterior si no hay imagen*/
 }
-
+/*estilo para encabezado de la pagina*/
 header {
-    background: #414344;
-    color: rgb(235, 213, 15);
-    padding: 20px 0;
-    text-align: center;
+    background: #414344;/*colo de fondo oscuro */
+    color: rgb(235, 213, 15);/*texto en amarillo claro*/
+    padding: 20px 0;/*espacio superior e inferiorior */
+    text-align: center;/*centra el texto*/
 }
-
+/*contenedor de formulario de inicio de sesion */
 .inicio-sesion {
-    border: 1px solid #ccc;
-    padding: 15px;
-    background-color: #807979;
-    border-radius: 5px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    border: 1px solid #ccc;/*borde gris claro */
+    padding: 15px;/*espacio interno*/
+    background-color: #807979;/*fondo gris*/
+    border-radius: 5px;/*bordes redondeados*/
+    position: absolute;/*posicion absoluta en pantalla*/
+    top: 10px;/*distancia desde arriba*/
+    right: 10px;/*distancia desde la derecha*/
 }
 
+/*estilo para etiquetas de formulario*/
 label {
-    display: block;
-    margin-top: 10px;
+    display: block;/*se mustra como bloque (una por linea)*/
+    margin-top: 10px;/*espacio superior*/
 }
-
+/*estilo general para los input y select de formulario*/
 input, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    width: 100%;/*ocupa todo el espacio disponible*/
+    padding: 8px;/*espaciado interno*/
+    margin-top: 5px;/*espaciado superior*/
 }
-
+/*estilo de botones */
 button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #42fdbf;
-    color: rgb(8, 8, 8);
-    border: none;
-    border-radius: 5px;
+    margin-top: 10px;/*espacio arriba del boton */
+    padding: 10px;/*espacio interno*/
+    background-color: #42fdbf;/*fondo verde agua*/
+    color: rgb(8, 8, 8);/*texto negro*/
+    border: none;/*sin borde*/
+    border-radius: 5px;/*bordes redondeados*/
 }
-
+/*efecto al pasar el masuse sobre los botones*/
 button:hover {
-    background-color: #18dae0;
+    background-color: #18dae0;/*cambia el color de fondo*/
 }
-
+/*contenedor general*/
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    width: 80%;/*ancho del 80% de la pantalla*/
+    margin: auto;/*centrado horizontal*/
+    overflow: hidden;/*evita que los elementos floten fuera del contenedor */
 }
-
+/*estilo de cada producto*/
 .product {
-    border: 1px solid #f7efef;
-    margin-bottom: 20px;
-    background: rgb(202, 207, 206);
-    padding: 15px;
+    border: 1px solid #f7efef;/*borde claro*/
+    margin-bottom: 20px;/*espacio de bajo del producto*/
+    background: rgb(202, 207, 206);/*fondo claro*/
+    padding: 15px;/*espacio interno*/
 }
-
+/*estilo de pie de pagina*/
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #424342;
-    color: rgba(230, 255, 5, 0.925);
+    text-align: center;/*centrado de texto*/
+    padding: 10px 0;/*espacio vertical*/
+    background: #424342;/*fondo oscuro*/
+    color: rgba(230, 255, 5, 0.925);/*texto amarillo con algo de transparencia*/
     
 }
