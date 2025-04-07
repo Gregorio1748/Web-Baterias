@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!--Define el tipo de documento como HTML-->
+<html lang="es"> <!--Establece el idioma del contenido en esapñol-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BATERIAS J.S</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8"> <!--Define la codificacion de caracteres como UTF-8-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Hce que la pagina sea responsive-->
+    <title>BATERIAS J.S</title> <!--titulo de la pestaña de navegador-->
+    <link rel="stylesheet" href="styles.css"> <!--vihincola la hoja de extilos externa-->
 </head>
 <body>
-
+<!--encabezado principal con titulo y carrito de compras-->
     <header>
         <h1>BATERIAS J.S</h1>
-        <a href="checkout.html" class="carrito">🛒 (<span id="cart-count">0</span>)</a>
-        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <a href="checkout.html" class="carrito">🛒 (<span id="cart-count">0</span>)</a> <!--enlace al carrito con contador-->
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button><!--boton para vaciar el carrito-->
     </header>
+    <!--formulario de busqueda-->
 <form action="/buscar" method="GET">
     <input type="text" name="query" placeholder="Buscar..." required>
     <button type="submit">Buscar</button>
 </form>
-
+<!--seccion de inicio de sesion-->
 <div class="inicio-sesion">
     <h2>Iniciar Sesión</h2>
     <form action="/BATERIAS JS/inicio_sesion.php" method="POST">
+        <!--seleccion de rol-->
         <label for="rol">Selecciona tu rol:</label>
         <select id="rol" name="rol" required>
             <option value="">--Selecciona--</option>
@@ -28,18 +30,18 @@
             <option value="administrador">Administrador</option>
             <option value="vendedor">Vendedor</option>
         </select>
-
+        <!--campo de usuario-->
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required>
-
+<!--campo de contraseña-->
         <label for="contrasena">Contraseña:</label>
         <input type="password" id="contrasena" name="contrasena" required>
-
+<!--boton para enviar formulario de usuario-->
         <button type="submit">Iniciar Sesión</button>
     </form>
-
+<!--enlace para mostrar el formulario de registro-->
     <p>No estás registrado? <a href="#" onclick="mostrarRegistro()">Regístrate aquí</a></p>
-
+<!--formulario de registro oculto por defecto-->
     <div id="formulario-registro" style="display: none;">
         <h2>Registro</h2>
         <form action="tu_script_de_registro.php" method="post">
@@ -60,21 +62,22 @@
 
             <button type="submit">Registrarse</button>
         </form>
-
+<!--enlace para cancelar el registro-->
         <p><a href="#" onclick="ocultarRegistro()">Cancelar registro</a></p>
     </div>
 </div>
-
+<!--contenedor principal de productos-->
 <div class="container">
     <h2>POTENCIA TU VEHÍCULO CON NUESTRAS BATERÍAS DE ALTA CALIDAD</h2>
-
+<!--productos 1-->
     <div class="product">
         <h3>Batería de moto 12Ah</h3>
         <p>Precio: $90.000</p>      
         <img src="bttt.jpeg" width="10%">                                                  
         <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
-        
+
     </div>
+    <!--productos 2-->
     <div class="product">
         <h3>Batería de Carro 40Ah</h3>
         <p>Precio: $435.000</p>      
@@ -82,6 +85,7 @@
         <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
         
     </div>
+    <!--productos 3-->
     <div class="product">
         <h3>Batería de moto 12Ah</h3>
         <p>Precio: $75.000</p>      
@@ -89,21 +93,21 @@
         <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
         
     </div>
-
+<!--productos 4-->
     <div class="product">
         <h3>Batería de Carro 60Ah</h3>
         <p>Precio: $650.000</p>
         <img src="btb.jpeg" width="10%"> 
         <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
     </div>
-
+<!--productos 5-->
     <div class="product">
         <h3>Batería de Moto 12Ah</h3>
         <p>Precio: $79.000</p>
         <img src="bt.webp" width="10%"> 
         <button onclick="agregarAlCarrito()">Añadir al Carrito 🛒</button>
     </div>
-
+<!--formulario de contatcto-->
     <h2>Contacto</h2>
     <form action="#" method="post">
         <label for="name">Nombre:</label><br>
@@ -118,11 +122,11 @@
         <input type="submit" value="Enviar">
     </form>
 </div>
-
+<!--pie de pagina-->
 <footer>
     <p>&copy; BATERIAS J.S - LA MEJOR OPCIÓN PARA TU VEHÍCULO.</p>
 </footer>
-
+<!--inclusion del archivo JavaScript-->
 <script src="script.js"></script>
 </body>
 </html>
