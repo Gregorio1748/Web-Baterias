@@ -23,13 +23,11 @@
     <h2>Iniciar Sesión</h2>
     <form action="/BATERIAS JS/inicio_sesion.php" method="POST">
         <!--seleccion de rol-->
-        <label for="rol">Selecciona tu rol:</label>
-        <select id="rol" name="rol" required>
-            <option value="">--Selecciona--</option>
-            <option value="cliente">Cliente</option>
-            <option value="administrador">Administrador</option>
-            <option value="vendedor">Vendedor</option>
-        </select>
+        <form action="procesar_login.php" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="contrasena" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
         <!--campo de usuario-->
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required>
@@ -44,22 +42,28 @@
 <!--formulario de registro oculto por defecto-->
     <div id="formulario-registro" style="display: none;">
         <h2>Registro</h2>
-        <form action="tu_script_de_registro.php" method="post">
-            <label for="nombres">Nombres:</label>
+        <form action="registro.php" method="post">
+            <label for="nombres">nombres:</label>
             <input type="text" id="nombres" name="nombres" required>
-
+        
             <label for="apellidos">Apellidos:</label>
             <input type="text" id="apellidos" name="apellidos" required>
-
+        
             <label for="cedula">Cédula:</label>
             <input type="text" id="cedula" name="cedula" required>
-
+        
             <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
-
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
-
+        
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+        
+            <label for="confirmar_contraseña">Confirmar Contraseña:</label>
+            <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" required>
+        
             <button type="submit">Registrarse</button>
         </form>
 <!--enlace para cancelar el registro-->
@@ -110,7 +114,7 @@
 <!--formulario de contatcto-->
     <h2>Contacto</h2>
     <form action="#" method="post">
-        <label for="name">Nombre:</label><br>
+        <label for="name">nombre:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
         <label for="email">Correo Electrónico:</label><br>
